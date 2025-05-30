@@ -51,18 +51,20 @@ function App() {
   }
 
   const handleCalculate = ()=>{
-    setScore(weight/((height/100)*(height/100)) )
-    if(score <18.5){
+    const bmi =weight/((height/100)*(height/100)) 
+    setScore(bmi)
+
+    if(bmi <18.5){
       setVerdict("Under Weight")
     }
-    else if(score>=18.5 
-      || score<=24.9){
+    else if(bmi>=18.5 
+      && score<=24.9){
       setVerdict("Normal")
     }
-     else if(score>=25 ||score<=29.9){
+     else if(bmi>=25 && bmi<=29.9){
       setVerdict("Over Weight")
     }
-     else if (score>=30){
+     else{
       setVerdict("Obesity")
     }
   }
