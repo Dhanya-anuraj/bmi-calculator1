@@ -55,10 +55,11 @@ function App() {
     if(score <18.5){
       setVerdict("Under Weight")
     }
-    else if(score>=18.5 && score<=24.9){
+    else if(score>=18.5 
+      || score<=24.9){
       setVerdict("Normal")
     }
-     else if(score>=25 && score<=29.9){
+     else if(score>=25 ||score<=29.9){
       setVerdict("Over Weight")
     }
      else if (score>=30){
